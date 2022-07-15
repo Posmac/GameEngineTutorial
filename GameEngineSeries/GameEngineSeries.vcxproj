@@ -11,9 +11,11 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Refra\Log.cpp" />
     <ClCompile Include="src\Refra\Application.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Refra\Log.h" />
     <ClInclude Include="src\Refra\Application.h" />
     <ClInclude Include="src\Refra\Core.h" />
     <ClInclude Include="src\Refra\EntryPoint.h" />
@@ -67,6 +69,7 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;RF_PLATFORM_WINDOWS;RE_BUILD_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp14</LanguageStandard>
+      <AdditionalIncludeDirectories>$(SolutionDir)GameEngineSeries\vendor\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
