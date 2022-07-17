@@ -8,7 +8,7 @@
 
 namespace rfe
 {
-	class RE_API Log
+	class RF_API Log
 	{
 	public:
 		static void Init();

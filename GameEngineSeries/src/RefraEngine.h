@@ -1,10 +1,10 @@
 #pragma once
 
 //FOR use by Refra applications
-#include "Refra/Application.h"
-#include "Refra/Log.h"
+#include "RefraEngine/Application.h"
+#include "RefraEngine/Log.h"
 //---------------------------
 
 //ENTRY POINT ---------------
-#include "Refra/EntryPoint.h"
+#include "RefraEngine/EntryPoint.h"
 //---------------------------

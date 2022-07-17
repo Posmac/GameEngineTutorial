@@ -4,7 +4,7 @@
 
 namespace rfe
 {
-	class RE_API Application
+	class RF_API Application
 	{
 	public:
 		Application();
