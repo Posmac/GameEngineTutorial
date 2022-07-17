@@ -26,6 +26,7 @@ project "GameEngineSeries"
 	
 	includedirs
 	{
+		"GameEngineSeries/src/RefraEngine",
 		"%{prj.name}/vendor/spdlog/include"
 	}
 	

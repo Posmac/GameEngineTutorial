@@ -9,3 +9,5 @@
 #else
 	#error Engine supports only Windows platform!
 #endif
+
+#define BIT(x) (1<<x)
