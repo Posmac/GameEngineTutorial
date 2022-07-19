@@ -2,8 +2,6 @@
 
 #include "Event.h"
 
-#include <sstream>
-
 namespace rfe
 {
 	class RF_API WindowResizeEvent : public Event

@@ -18,6 +18,9 @@ project "GameEngineSeries"
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin/intermidiate/" .. outputdir .. "/%{prj.name}")
 	
+	pchheader "rfpch.h"
+	pchsource "GameEngineSeries/src/rfpch.cpp"
+	
 	files 
 	{
 		"%{prj.name}/src/**.h",
@@ -26,7 +29,7 @@ project "GameEngineSeries"
 	
 	includedirs
 	{
-		"GameEngineSeries/src/RefraEngine",
+		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include"
 	}
 	

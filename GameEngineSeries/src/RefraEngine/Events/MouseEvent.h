@@ -1,8 +1,7 @@
 #pragma once
 
+#include "rfpch.h"
 #include "Event.h"
-
-#include <sstream>
 
 namespace rfe
 {

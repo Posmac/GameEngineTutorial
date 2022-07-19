@@ -34,6 +34,7 @@
     <ClInclude Include="src\RefraEngine\Log.h">
       <Filter>RefraEngine</Filter>
     </ClInclude>
+    <ClInclude Include="src\rfpch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\RefraEngine\Application.cpp">
@@ -42,5 +43,6 @@
     <ClCompile Include="src\RefraEngine\Log.cpp">
       <Filter>RefraEngine</Filter>
     </ClCompile>
+    <ClCompile Include="src\rfpch.cpp" />
   </ItemGroup>
 </Project>

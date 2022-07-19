@@ -1,6 +1,8 @@
+#include "rfpch.h"
 #include "Application.h"
 
-namespace rfe{
+namespace rfe
+{
 	Application::Application(){
 
 	}
