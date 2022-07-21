@@ -10,6 +10,13 @@ workspace "RefraEngine"
 	
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+--Include directories relative to root folder (solution dir)
+IncludeDir = {}
+IncludeDir["GLFW"] = "GameEngineSeries/vendor/GLFW/include"
+
+include "GameEngineSeries/vendor/GLFW"
+--END
+
 project "GameEngineSeries"
 	location "GameEngineSeries"
 	kind "SharedLib"
@@ -30,7 +37,14 @@ project "GameEngineSeries"
 	includedirs
 	{
 		"%{prj.name}/src",
-		"%{prj.name}/vendor/spdlog/include"
+		"%{prj.name}/vendor/spdlog/include",
+		"%{IncludeDir.GLFW}"
+	}
+	
+	links
+	{
+		"GLFW",
+		"opengl32.lib"
 	}
 	
 	filter "system:windows"
@@ -91,6 +105,7 @@ project "Sandbox"
 		cppdialect "C++17"
 		staticruntime "On"
 		systemversion "latest"
+		buildoptions "/MDd"
 		
 		defines
 		{
