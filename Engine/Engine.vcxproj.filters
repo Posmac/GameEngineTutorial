@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Platform">
+      <UniqueIdentifier>{2AC788B4-1694-E3BF-3FAD-D1672BD9184E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\Windows">
+      <UniqueIdentifier>{64FBD71A-50F4-F66C-7926-DCF1657ED678}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RefraEngine">
+      <UniqueIdentifier>{8BB3F2AD-F768-6BA3-805D-657AEC1162A7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RefraEngine\Events">
+      <UniqueIdentifier>{0F95BF64-FB78-80BA-64D9-7A0D50DC6A3C}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
+      <Filter>Platform\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="src\RefraEngine.h" />
+    <ClInclude Include="src\RefraEngine\Application.h">
+      <Filter>RefraEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\RefraEngine\Core.h">
+      <Filter>RefraEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\RefraEngine\EntryPoint.h">
+      <Filter>RefraEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\RefraEngine\Events\ApplicationEvent.h">
+      <Filter>RefraEngine\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\RefraEngine\Events\Event.h">
+      <Filter>RefraEngine\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\RefraEngine\Events\KeyEvent.h">
+      <Filter>RefraEngine\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\RefraEngine\Events\MouseEvent.h">
+      <Filter>RefraEngine\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\RefraEngine\Log.h">
+      <Filter>RefraEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\RefraEngine\Window.h">
+      <Filter>RefraEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\rfpch.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
+      <Filter>Platform\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="src\RefraEngine\Application.cpp">
+      <Filter>RefraEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\RefraEngine\Log.cpp">
+      <Filter>RefraEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\rfpch.cpp" />
+  </ItemGroup>
+</Project>

@@ -7,7 +7,7 @@ workspace "RefraEngine"
 		"Release",
 		"Dist"
 	}
-	
+
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
 --Include directories relative to root folder (solution dir)
@@ -17,8 +17,8 @@ IncludeDir["GLFW"] = "Engine/vendor/GLFW/include"
 include "Engine/vendor/GLFW"
 --END
 
-project "GameEngineSeries"
-	location "GameEngineSeries"
+project "Engine"
+	location "Engine"
 	kind "SharedLib"
 	language "C++"
 	
@@ -26,7 +26,7 @@ project "GameEngineSeries"
 	objdir ("bin/intermidiate/" .. outputdir .. "/%{prj.name}")
 	
 	pchheader "rfpch.h"
-	pchsource "GameEngineSeries/src/rfpch.cpp"
+	pchsource "Engine/src/rfpch.cpp"
 	
 	files 
 	{
@@ -91,13 +91,13 @@ project "Sandbox"
 	
 	includedirs
 	{
-		"GameEngineSeries/vendor/spdlog/include",
-		"GameEngineSeries/src"
+		"Engine/vendor/spdlog/include",
+		"Engine/src"
 	}
 	
 	links
 	{
-		"GameEngineSeries"
+		"Engine"
 	}
 	
 	
@@ -105,7 +105,6 @@ project "Sandbox"
 		cppdialect "C++17"
 		staticruntime "On"
 		systemversion "latest"
-		buildoptions "/MDd"
 		
 		defines
 		{

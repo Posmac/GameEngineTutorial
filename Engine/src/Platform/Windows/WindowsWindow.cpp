@@ -30,7 +30,8 @@ namespace rfe
 
 		if (!s_GLFWInitialized)
 		{
-			RF_CORE_ASSERT(glfwInit(), "Could not initialize GLFW!");
+			bool success = glfwInit();
+			RF_CORE_ASSERT(success, "Could not initialize GLFW!");
 			s_GLFWInitialized = true;
 		}
 
