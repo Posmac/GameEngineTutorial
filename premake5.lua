@@ -12,9 +12,9 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
 --Include directories relative to root folder (solution dir)
 IncludeDir = {}
-IncludeDir["GLFW"] = "GameEngineSeries/vendor/GLFW/include"
+IncludeDir["GLFW"] = "Engine/vendor/GLFW/include"
 
-include "GameEngineSeries/vendor/GLFW"
+include "Engine/vendor/GLFW"
 --END
 
 project "GameEngineSeries"
