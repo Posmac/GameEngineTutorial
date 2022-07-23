@@ -15,7 +15,7 @@ namespace rfe
 		inline float GetX() const { return m_MouseX; }
 		inline float GetY() const { return m_MouseY; }
 
-		std::string ToString()
+		std::string ToString() const override
 		{
 			std::stringstream ss;
 			ss << "Moused moved event: " << m_MouseX << " | " << m_MouseY;
@@ -39,7 +39,7 @@ namespace rfe
 		inline float GetX_Offset() const { return m_OffsetX; }
 		inline float GetY_Offset() const { return m_OffsetY; }
 
-		std::string ToString()
+		std::string ToString() const override
 		{
 			std::stringstream ss;
 			ss << "Moused scrolla event: " << m_OffsetX << " | " << m_OffsetY;
@@ -71,7 +71,7 @@ namespace rfe
 		MouseButtonPressedEvent(int button)
 			: MouseButtonEvent(button) {}
 
-		std::string ToString()
+		std::string ToString() const override
 		{
 			std::stringstream ss;
 			ss << "Moused button pressed event: " << m_Button;
@@ -86,7 +86,7 @@ namespace rfe
 		MouseButtonReleasedEvent(int button)
 			: MouseButtonEvent(button) {}
 
-		std::string ToString()
+		std::string ToString() const override
 		{
 			std::stringstream ss;
 			ss << "Moused button released event: " << m_Button;

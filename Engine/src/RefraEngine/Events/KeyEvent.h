@@ -8,6 +8,7 @@ namespace rfe
 	{
 	public:
 		inline int GetKeyCode() const { return m_KeyCode; }
+		EVENT_CLASS_CATEGORY(KeyboardCategory | InputCategory)
 	protected:
 		KeyEvent(int keyCode)
 			: m_KeyCode(keyCode)
@@ -40,7 +41,7 @@ namespace rfe
 	public:
 		KeyReleasedEvent(int keyCode)
 			: KeyEvent(keyCode) {}
-		std::string ToString()
+		std::string ToString() const override
 		{
 			std::stringstream ss;
 			ss << "Key Released Event: " << m_KeyCode;

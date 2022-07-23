@@ -1,6 +1,7 @@
 #pragma once
 
 #include "rfpch.h"
+#include "RefraEngine/Core.h"
 
 namespace rfe
 {
@@ -63,7 +64,7 @@ namespace rfe
 		}
 
 		template<typename T> 
-		bool Dispatch(EventFnc<T> fnc)
+		bool Dispatch(EventFnc<T> func)
 		{
 			if (m_Event.GetEventType() == T::GetStaticType())
 			{
