@@ -2,6 +2,7 @@
 
 //FOR use by Refra applications
 #include "RefraEngine/Application.h"
+#include "RefraEngine/Layer.h"
 #include "RefraEngine/Log.h"
 //---------------------------
 

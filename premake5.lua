@@ -65,14 +65,17 @@ project "Engine"
 		
 		filter "configurations:Debug"
 			defines "RF_DEBUG"
+			buildoptions "/MDd"
 			symbols "On"
 			
 		filter "configurations:Release"
 			defines "RF_RELEASE"
+			buildoptions "/MD"
 			optimize "On"
 		
 		filter "configurations:Dist"
 			defines "RF_DIST"
+			buildoptions "/MD"
 			optimize "On"
 
 project "Sandbox"
@@ -113,12 +116,15 @@ project "Sandbox"
 		
 		filter "configurations:Debug"
 			defines "RF_DEBUG"
+			buildoptions "/MDd"
 			symbols "On"
 			
 		filter "configurations:Release"
 			defines "RF_RELEASE"
+			buildoptions "/MD"
 			optimize "On"
 		
 		filter "configurations:Dist"
 			defines "RF_DIST"
+			buildoptions "/MD"
 			optimize "On"

@@ -11,7 +11,7 @@ int main(int argc, char** argv)
 	RF_CLIENT_CRITICAL("Hello!");
 
 	auto app = rfe::CreateApplication();
-	app->Run();
+ 	app->Run();
 	delete app;
 }
 

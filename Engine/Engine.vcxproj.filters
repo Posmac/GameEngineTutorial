@@ -40,6 +40,12 @@
     <ClInclude Include="src\RefraEngine\Events\MouseEvent.h">
       <Filter>RefraEngine\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\RefraEngine\Layer.h">
+      <Filter>RefraEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\RefraEngine\LayerStack.h">
+      <Filter>RefraEngine</Filter>
+    </ClInclude>
     <ClInclude Include="src\RefraEngine\Log.h">
       <Filter>RefraEngine</Filter>
     </ClInclude>
@@ -53,6 +59,12 @@
       <Filter>Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\RefraEngine\Application.cpp">
+      <Filter>RefraEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\RefraEngine\Layer.cpp">
+      <Filter>RefraEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\RefraEngine\LayerStack.cpp">
       <Filter>RefraEngine</Filter>
     </ClCompile>
     <ClCompile Include="src\RefraEngine\Log.cpp">
