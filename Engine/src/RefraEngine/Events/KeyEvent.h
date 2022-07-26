@@ -41,12 +41,30 @@ namespace rfe
 	public:
 		KeyReleasedEvent(int keyCode)
 			: KeyEvent(keyCode) {}
+
 		std::string ToString() const override
 		{
 			std::stringstream ss;
 			ss << "Key Released Event: " << m_KeyCode;
 			return ss.str();
 		}
+
+		EVENT_CLASS_TYPE(KeyReleased)
+	};
+
+	class RF_API KeyTypedEvent : public KeyEvent
+	{
+	public:
+		KeyTypedEvent(int keyCode)
+			: KeyEvent(keyCode) {}
+
+		std::string ToString() const override
+		{
+			std::stringstream ss;
+			ss << "Key Released Event: " << m_KeyCode;
+			return ss.str();
+		}
+
 		EVENT_CLASS_TYPE(KeyReleased)
 	};
 }
