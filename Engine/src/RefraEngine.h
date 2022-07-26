@@ -6,6 +6,8 @@
 #include "RefraEngine/Log.h"
 //---------------------------
 
+#include "RefraEngine/ImGui/ImGuiLayer.h"
+
 //ENTRY POINT ---------------
 #include "RefraEngine/EntryPoint.h"
 //---------------------------
