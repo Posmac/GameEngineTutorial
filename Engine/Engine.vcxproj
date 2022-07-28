@@ -162,9 +162,11 @@
     <ClInclude Include="src\RefraEngine\Events\MouseEvent.h" />
     <ClInclude Include="src\RefraEngine\ImGui\ImGuiLayer.h" />
     <ClInclude Include="src\RefraEngine\Input.h" />
+    <ClInclude Include="src\RefraEngine\KeyCodes.h" />
     <ClInclude Include="src\RefraEngine\Layer.h" />
     <ClInclude Include="src\RefraEngine\LayerStack.h" />
     <ClInclude Include="src\RefraEngine\Log.h" />
+    <ClInclude Include="src\RefraEngine\MouseButtonCodes.h" />
     <ClInclude Include="src\RefraEngine\Window.h" />
     <ClInclude Include="src\rfpch.h" />
   </ItemGroup>

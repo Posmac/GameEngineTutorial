@@ -11,12 +11,23 @@ public:
 
 	void OnUpdate() override
 	{
-		RF_CLIENT_INFO("Example layer::Update");
+		if (rfe::Input::IsKeyPressed(RF_KEY_TAB))
+		{
+			RF_CLIENT_TRACE("Tab key is pressed(poll)");
+		}
 	}
 
 	void OnEvent(rfe::Event& e) override
 	{
-		RF_CLIENT_TRACE("{0}", e);
+		if (e.GetEventType() == rfe::EventType::KeyPressed)
+		{
+			rfe::KeyPressedEvent& ev = (rfe::KeyPressedEvent&)e;
+			if (ev.GetKeyCode() == RF_KEY_TAB)
+			{
+				RF_CLIENT_TRACE("Tab key is pressed (event)");
+			}
+			RF_CLIENT_TRACE("{0}", (char)ev.GetKeyCode());
+		}
 	}
 };
 
