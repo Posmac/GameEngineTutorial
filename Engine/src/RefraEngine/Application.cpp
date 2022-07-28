@@ -10,14 +10,14 @@ namespace rfe
 	Application* Application::s_Instance = nullptr;
 
 	Application::Application() {
-		RF_CORE_ASSERT(s_Instance, "Application already exist");
+		RF_CORE_ASSERT(!s_Instance, "Application already exist");
 		s_Instance = this;
 		m_Window = std::unique_ptr<Window>(Window::Create());
 		m_Window->SetEventCallback(BIND_EVENT_FN(OnEvent));
 	}
 
 	Application::~Application(){
-
+		s_Instance = nullptr;
 	}
 
 	void Application::Run()

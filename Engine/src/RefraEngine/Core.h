@@ -10,20 +10,13 @@
 	#error Engine supports only Windows platform!
 #endif
 
-#ifdef RF_ENABLE_ASSERTS
-	#define RF_CLIENT_ASSERT(x, ...) { /
-								if(!(x)) { /
-									RF_CLIENT_ERROR("Assertion failed: {0}", __VA_ARGS__); / 
-									__debugbreak; / 
-								} / 
-							  }
+#ifdef RF_DEBUG
+	#define RF_ENABLE_ASSERTS
+#endif
 
-	#define RF_CORE_ASSERT(x, ...) { /
-							  if (!(x)) { /
-								  RF_CORE_ERROR("Assertion failed: {0}", __VA_ARGS__); /
-								  __debugbreak; /
-								} /
-							  }
+#ifdef RF_ENABLE_ASSERTS
+	#define RF_CLIENT_ASSERT(x, ...) { if(!(x)) { RF_CLIENT_ERROR("Assertion Failed: {0}", __VA_ARGS__); __debugbreak(); } }
+	#define RF_CORE_ASSERT(x, ...) { if(!(x)) { RF_CORE_ERROR("Assertion Failed: {0}", __VA_ARGS__); __debugbreak(); } }
 #else
 	#define RF_CLIENT_ASSERT(x, ...)
 	#define RF_CORE_ASSERT(x, ...)
