@@ -65,6 +65,8 @@
       <Filter>RefraEngine</Filter>
     </ClInclude>
     <ClInclude Include="src\rfpch.h" />
+    <ClInclude Include="src\RefraEngine\Input.h" />
+    <ClInclude Include="src\Platform\Windows\WindowsInput.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp">
@@ -89,5 +91,6 @@
       <Filter>RefraEngine</Filter>
     </ClCompile>
     <ClCompile Include="src\rfpch.cpp" />
+    <ClCompile Include="src\Platform\Windows\WindowsInput.cpp" />
   </ItemGroup>
 </Project>
