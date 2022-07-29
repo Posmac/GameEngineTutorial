@@ -1,4 +1,5 @@
 #include <RefraEngine.h>
+#include "glm/glm.hpp"
 
 class ExampleLayer : public rfe::Layer
 {
@@ -6,7 +7,6 @@ public:
 	ExampleLayer()
 		: Layer("Example")
 	{
-
 	}
 
 	void OnUpdate() override
