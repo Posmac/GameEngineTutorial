@@ -1,6 +1,8 @@
 #include <RefraEngine.h>
 #include "glm/glm.hpp"
 
+#include "imgui/imgui.h"
+
 class ExampleLayer : public rfe::Layer
 {
 public:
@@ -29,6 +31,13 @@ public:
 			RF_CLIENT_TRACE("{0}", (char)ev.GetKeyCode());
 		}
 	}
+
+	virtual void OnImGuiRender() override
+	{
+		ImGui::Begin("Test");
+		ImGui::Text("Hello World");
+		ImGui::End();
+	}
 };
 
 class SandBox : public rfe::Application
@@ -37,7 +46,6 @@ public:
 	SandBox()
 	{
 		PushLayer(new ExampleLayer());
-		PushOverlay(new rfe::ImGuiLayer());
 	}
 
 	~SandBox()

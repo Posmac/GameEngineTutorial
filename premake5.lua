@@ -30,6 +30,7 @@ project "Engine"
 	location "Engine"
 	kind "SharedLib"
 	language "C++"
+	cppdialect "C++17"
 	staticruntime "off"
 	
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
@@ -44,6 +45,11 @@ project "Engine"
 		"%{prj.name}/src/**.cpp",
 		"%{prj.name}/vendor/glm/glm/**.hpp",
 		"%{prj.name}/vendor/glm/glm/**.inl"
+	}
+	
+	defines 
+	{
+		"_CRT_SECURE_NO_WARNINGS"
 	}
 	
 	includedirs
@@ -65,7 +71,6 @@ project "Engine"
 	}
 	
 	filter "system:windows"
-		cppdialect "C++17"
 		systemversion "latest"
 		
 		defines
@@ -99,6 +104,7 @@ project "Sandbox"
 	location "Sandbox"
 	kind "ConsoleApp"
 	language "C++"
+	cppdialect "C++17"
 	staticruntime "off"
 	
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
@@ -114,6 +120,7 @@ project "Sandbox"
 	{
 		"Engine/vendor/spdlog/include",
 		"Engine/src",
+		"Engine/vendor",
 		"%{IncludeDir.glm}"
 	}
 	
@@ -122,14 +129,13 @@ project "Sandbox"
 		"Engine"
 	}
 	
-	
 	filter "system:windows"
-		cppdialect "C++17"
 		systemversion "latest"
 		
 		defines
 		{
-			"RF_PLATFORM_WINDOWS"
+			"RF_PLATFORM_WINDOWS", 
+			"GLFW_INCLUDE_NONE"
 		}
 		
 		filter "configurations:Debug"
